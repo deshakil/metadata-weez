@@ -89,6 +89,9 @@ def upload_file_to_blob(file_data, file_name, user_id):
         print(f"Error uploading file: {e}")
         return False
 
+@app.route('/', methods=['POST'])
+return jsonify({'Running': True}), 200
+
 # API Endpoint to check if metadata exists and upload if it doesn’t
 @app.route('/check-metadata', methods=['POST'])
 def check_metadata():
